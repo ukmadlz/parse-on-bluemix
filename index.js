@@ -93,3 +93,5 @@ var host = process.env.VCAP_APP_HOST || 'localhost';
 app.listen(port, host, function() {
   console.log('parse-server running on port ' + port + '.');
 });
+
+require("cf-deployment-tracker-client").track();
