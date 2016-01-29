@@ -40,10 +40,8 @@ if (process.env.DATABASE_URI) {
       vcapServices['user-provided'][i].credentials.uri.search(pattern) >= 0) {
       var databaseUri = 'mongodb://' +
         vcapServices['user-provided'][i].credentials.user +
-        ':' + vcapServices['user-provided'][i].credentials.passwod +
-        '@' + vcapServices['user-provided'][i].credentials.uri +
-        ':' + vcapServices['user-provided'][i].credentials.port +
-        '/' + vcapServices['user-provided'][i].credentials.user;
+        ':' + vcapServices['user-provided'][i].credentials.password +
+        '@' + vcapServices['user-provided'][i].credentials.uri;
       break;
     }
   }
