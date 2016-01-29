@@ -1,0 +1,32 @@
+{
+  "name": "parse-on-bluemix",
+  "version": "0.0.1",
+  "description": "A quick attempt to roll @ParsePlatform on @ibm-bluemix and see what happens",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ukmadlz/parse-on-bluemix.git"
+  },
+  "keywords": [
+    "parse",
+    "dbaas",
+    "mongodb"
+  ],
+  "author": "Mike Elsmore <mike.elsmore@uk.ibm.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ukmadlz/parse-on-bluemix/issues"
+  },
+  "homepage": "https://github.com/ukmadlz/parse-on-bluemix#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "parse-server": "^2.0.0"
+  },
+  "engines": {
+    "node": "4.2.5"
+  }
+}
