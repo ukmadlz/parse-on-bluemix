@@ -32,7 +32,6 @@ if (!process.env.MASTER_KEY) {
 if (process.env.DATABASE_URI) {
   var databaseUri = process.env.DATABASE_URI;
 } else if (process.env.VCAP_SERVICES) {
-  // var vcapServicesString = '{"user-provided": [{"name": "MongoDB by Compose-bd","label": "user-provided","credentials": {"uri": "cockney.4.mongolayer.com:10120/elsmore","port": "10120","user": "elsmore","password": "OrgGZOppyLsDY2J1"}}]}';
   var vcapServices = JSON.parse(process.env.VCAP_SERVICES);
   const pattern = /mongo/i;
   for (var i = 0; i < vcapServices['user-provided'].length; i++) {
