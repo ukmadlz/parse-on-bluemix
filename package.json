@@ -24,7 +24,8 @@
   "homepage": "https://github.com/ukmadlz/parse-on-bluemix#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "parse-server": "^2.0.0"
+    "parse-server": "^2.0.0",
+    "cf-deployment-tracker-client": "0.0.7"
   },
   "engines": {
     "node": "4.2.5"
