@@ -49,6 +49,11 @@ if (process.env.DATABASE_URI) {
   throw 'Please provide DATABASE_URI to an instance of MongoDB or deploy to Bluemix with a Compose MongoDB service';
 }
 
+// Server Location
+var port      = process.env.VCAP_APP_PORT || process.env.PORT || 1337;
+var host      = process.env.VCAP_APP_HOST || 'localhost';
+var mountPath = process.env.PARSE_MOUNT || '/';
+
 // Specify the connection string for your mongodb database
 // and the location to your Parse cloud code
 var parseConfig = {
@@ -56,6 +61,7 @@ var parseConfig = {
   appId: process.env.APP_ID,
   masterKey: process.env.MASTER_KEY,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
+  serverURL: ((process.env.HTTPS) ? 'https' : 'http') + host + ':' + port + mountPath,
 };
 
 // Optional Keys
@@ -83,12 +89,9 @@ if (process.env.DOTNET_KEY) {
 var api = new ParseServer(parseConfig);
 
 // Serve the Parse API on the / URL prefix
-var mountPath = process.env.PARSE_MOUNT || '/';
 app.use(mountPath, api);
 
 // And listen to requests
-var port = process.env.VCAP_APP_PORT || process.env.PORT || 1337;
-var host = process.env.VCAP_APP_HOST || 'localhost';
 app.listen(port, host, function() {
   console.log('parse-server running on port ' + port + '.');
 });
