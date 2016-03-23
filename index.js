@@ -66,23 +66,48 @@ var parseConfig = {
 
 // Optional Keys
 if (process.env.FILE_KEY) {
+  // String
   parseConfig.fileKey = process.env.FILE_KEY;
 }
 
 if (process.env.CLIENT_KEY) {
+  // String
   parseConfig.clientKey = process.env.CLIENT_KEY;
 }
 
 if (process.env.JS_KEY) {
+  // String
   parseConfig.javascriptKey = process.env.JS_KEY;
 }
 
 if (process.env.REST_KEY) {
+  // String
   parseConfig.restAPIKey = process.env.REST_KEY;
 }
 
 if (process.env.DOTNET_KEY) {
+  // String
   parseConfig.dotNetKey = process.env.DOTNET_KEY;
+}
+
+if (process.env.ALLOW_CLIENT_CLASS_CREATION) {
+  // Boolean
+  parseConfig.allowClientClassCreation = process.env.ALLOW_CLIENT_CLASS_CREATION;
+}
+
+if (process.env.ENABLE_ANONYMOUS_USERS) {
+  // Boolean
+  parseConfig.enableAnonymousUsers = process.env.ENABLE_ANONYMOUS_USERS;
+}
+
+if (process.env.OAUTH) {
+  // Object: https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide#oauth
+  parseConfig.oauth = process.env.OAUTH;
+}
+
+if (process.env.FACEBOOK_APP_IDS) {
+  // Array
+  parseConfig.facebookAppIds = process.env.FACEBOOK_APP_IDS;
 }
 
 // Create Parse Server instance
