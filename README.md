@@ -21,6 +21,27 @@ Once deployed:
 
 **Don't have a Bluemix account?** If you haven't already, you'll be prompted to sign up for a Bluemix account when you click the button.  Sign up, verify your email address, then return here and click the the **Deploy to Bluemix** button again. Your new credentials let you deploy to the platform and also to code online with Bluemix and Git. If you have questions about working in Bluemix, find answers in the [Bluemix Docs](https://www.ng.bluemix.net/docs/).
 
+## Environment Variables
+
+### Required
+`APP_ID`
+`MASTER_KEY`
+`PARSE_MOUNT`
+`CLOUD_CODE_MAIN`
+`HTTPS`
+
+### Optional
+`DATABASE_URI`
+`FILE_KEY`
+`CLIENT_KEY`
+`JS_KEY`
+`REST_KEY`
+`DOTNET_KEY`
+`ALLOW_CLIENT_CLASS_CREATION`
+`ENABLE_ANONYMOUS_USERS`
+`OAUTH`
+`FACEBOOK_APP_IDS`
+
 ### Privacy Notice
 
 The Simple Search Service web application includes code to track deployments to Bluemix and other Cloud Foundry platforms. The following information is sent to a [Deployment Tracker](https://github.com/IBM-Bluemix/cf-deployment-tracker-service) service on each deployment:
@@ -36,7 +57,7 @@ This data is collected from the `VCAP_APPLICATION` environment variable in IBM B
 
 For manual deploys, deployment tracking can be disabled by removing `require("cf-deployment-tracker-client").track();` from the end of the `app.js` main server file.
 
-#### License 
+#### License
 
 Copyright 2016 IBM Cloud Data Services
 
