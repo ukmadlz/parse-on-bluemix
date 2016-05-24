@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ibm-cds-labs/parse-on-bluemix#readme",
   "dependencies": {
-    "cf-deployment-tracker-client": "0.0.7",
+    "cf-deployment-tracker-client": "^0.x",
     "express": "^4.13.4",
     "parse-server": "^2.2.1"
   },
