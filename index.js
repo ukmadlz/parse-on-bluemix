@@ -61,7 +61,7 @@ var parseConfig = {
   appId: process.env.APP_ID,
   masterKey: process.env.MASTER_KEY,
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  serverURL: ((process.env.HTTPS) ? 'https' : 'http') + host + ':' + port + mountPath,
+  serverURL: ((process.env.HTTPS) ? 'https://' : 'http://') + host + ':' + port + mountPath,
 };
 
 // Optional Keys
