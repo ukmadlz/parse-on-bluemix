@@ -31,6 +31,6 @@
     "parse-server": "^2.3.3"
   },
   "engines": {
-    "node": "4.2.5"
+    "node": "4.6"
   }
 }
