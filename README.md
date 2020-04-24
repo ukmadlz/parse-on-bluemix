@@ -1,6 +1,6 @@
 # Parse-on-Bluemix Overview
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/ibm-cds-labs/parse-on-bluemix.svg)](https://greenkeeper.io/)
+
 
 Parse, the application framework, is shortly to retire. You can still run Parse applications yourself thanks to the open-sourced [Parse Server](https://github.com/ParsePlatform/parse-server). This project gives you some simple starter code that lets you run the Parse Server on Bluemix. You can add a MongoDB service from Compose as the app's storage layer.
 
